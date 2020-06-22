@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Consumindo API</title>
+</head>
+
+<body onload="carregar()">
+    <script src="javaS.js"></script>
+    <div class="form">
+        <form id="formulario" action="" onsubmit="return false">
+            <div class="inputs">
+                <h1 id="h1">Adicionando novo empregado</h1>
+                <label for="nome">Nome:</label>
+                <input id="name" placeholder="Nome" type="text" name="name" required><br>
+                <label for="salario">Salário:</label>
+                <input type="number" id="salary" placeholder="0,00" min="0" name="salary" required><br>
+                <label for="idade">Idade:</label>
+                <input type="number" id="age" placeholder="1" name="age" min="0" required><br>
+                <label for="perfil">Avatar:</label>
+                <input type="url" id="avatar" placeholder="http://url.do.avatar" required name="avatar"><br><br></div>
+            <div class="botoes">
+                <button type="submit" form="formulario" value="Salvar" id="salvar" onclick="enviar()">Salvar</button>
+                <button type="submit" form="formulario" value="Editar" id="editar" onclick="alterar()">Editar</button>
+                <button type="reset" onclick="return confirm_reset();" value="Cancelar" id="cancelar">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <table id="tabela">
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Salário</th>
+            <th>Idade</th>
+            <th>Avatar</th>
+            <th>Ações</th>
+        </tr>
+    </table>
+</body>
+
+</html>
